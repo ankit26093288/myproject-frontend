@@ -1,0 +1,197 @@
+/* ===== Container ===== */
+.container {
+  max-width: 1400px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ===== Title ===== */
+.title {
+  text-align: center;
+  font-size: 2.8rem;
+  margin-bottom: 2rem;
+  color: #111;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* ===== Loading / Error ===== */
+.loading,
+.error {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #666;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+/* ===== Grid ===== */
+.pgGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+/* ===== PG Card ===== */
+.pgCard {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pgCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 28px rgba(0, 0, 0, 0.18);
+}
+
+/* ===== Image with Overlay ===== */
+.pgImage {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.pgCard:hover .pgImage {
+  transform: scale(1.08);
+}
+
+.pgOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(to top, rgba(0,0,0,0.5), transparent);
+  display: flex;
+  align-items: flex-end;
+  padding: 10px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+}
+
+/* ===== PG Info ===== */
+.pgName {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 0.8rem 0 0.3rem;
+  color: #111;
+}
+
+.pgLocation {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 0.4rem;
+}
+
+.pgRent {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ff6b6b;
+  margin-bottom: 0.4rem;
+}
+
+.pgRooms {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 0.4rem;
+}
+
+.pgAmenities {
+  font-size: 0.85rem;
+  color: #888;
+  font-style: italic;
+  margin-bottom: 0.5rem;
+}
+
+/* ===== Details Button ===== */
+.detailsBtn {
+  display: inline-block;
+  margin-top: auto;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #ff6b6b, #f7b733);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.detailsBtn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* ===== No PG Message ===== */
+.pgGrid p {
+  grid-column: 1/-1;
+  text-align: center;
+  font-size: 1.1rem;
+  color: #555;
+  font-weight: 500;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .pgGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .pgOverlay {
+    font-size: 1rem;
+  }
+}
+
+/* ===== Fade-in animation ===== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.detailsBtn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  color: #666;
+}
+
+
+.amenitiesContainer {
+  margin: 0.5rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.amenityTag {
+  background: linear-gradient(90deg, #007bff, #00aaff);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.noAmenities {
+  font-size: 0.85rem;
+  color: #666;
+  font-style: italic;
+}
+
+.disabledBtn {
+  background-color: #ccc !important;
+  cursor: not-allowed;
+  opacity: 0.7;
+}

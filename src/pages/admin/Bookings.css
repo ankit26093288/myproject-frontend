@@ -1,0 +1,70 @@
+.admin-bookings {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.admin-bookings h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #007bff;
+}
+
+.admin-bookings table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.admin-bookings th, .admin-bookings td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.admin-bookings th {
+  background-color: #007bff;
+  color: white;
+}
+
+.admin-bookings tr:hover {
+  background-color: #f1f1f1;
+}
+
+.status.confirmed {
+  color: green;
+  font-weight: bold;
+}
+.status.pending {
+  color: orange;
+  font-weight: bold;
+}
+.status.cancelled {
+  color: red;
+  font-weight: bold;
+}
+
+.btn-confirm {
+  background-color: green;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  margin-right: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.btn-cancel {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.btn-confirm:hover {
+  background-color: darkgreen;
+}
+.btn-cancel:hover {
+  background-color: darkred;
+}

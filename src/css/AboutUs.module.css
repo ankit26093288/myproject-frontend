@@ -1,0 +1,145 @@
+.aboutUs {
+  font-family: "Poppins", sans-serif;
+  color: #222;
+  background-color: #fff;
+}
+
+/* ===== HERO ===== */
+.hero {
+  background: linear-gradient(90deg, #1e90ff, #ff6b6b);
+  color: #fff;
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+.heroContent h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+}
+
+.heroContent p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* ===== SECTION ===== */
+.section {
+  text-align: center;
+  padding: 3rem 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.section h2 {
+  color: #1e90ff;
+  margin-bottom: 1rem;
+}
+
+/* ===== FEATURES ===== */
+.features {
+  background: #f9fafc;
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.featureGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.featureCard {
+  background: #fff;
+  border-radius: 12px;
+  padding: 2rem 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.featureCard:hover {
+  transform: translateY(-5px);
+}
+
+.featureCard span {
+  font-size: 2rem;
+  display: block;
+}
+
+.featureCard h3 {
+  margin: 0.8rem 0;
+  color: #ff6b6b;
+}
+
+/* ===== HOW IT WORKS ===== */
+.steps {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.stepGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.stepCard {
+  background: linear-gradient(135deg, #1e90ff15, #ff6b6b10);
+  border: 2px solid #1e90ff20;
+  border-radius: 12px;
+  padding: 1.5rem;
+  width: 220px;
+  transition: 0.3s;
+}
+
+.stepCard:hover {
+  background: linear-gradient(135deg, #1e90ff20, #ff6b6b20);
+  transform: translateY(-5px);
+}
+
+.stepCard span {
+  font-size: 2rem;
+}
+
+/* ===== CTA ===== */
+.cta {
+  background: linear-gradient(90deg, #1e90ff, #ff6b6b);
+  color: #fff;
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+.cta button {
+  background: #fff;
+  color: #1e90ff;
+  font-weight: 600;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: 0.3s;
+}
+
+.cta button:hover {
+  background: #f1f1f1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .heroContent h1 {
+    font-size: 2rem;
+  }
+
+  .featureGrid,
+  .stepGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .stepCard {
+    width: 100%;
+  }
+}

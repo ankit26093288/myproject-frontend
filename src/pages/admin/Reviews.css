@@ -1,0 +1,108 @@
+/* Scoped only for reviews page */
+.admin-reviews {
+  padding: 20px;
+  min-height: 100vh;
+  background-color: #f9f9f9;
+  font-family: Arial, sans-serif;
+}
+
+.reviews-title {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+.reviews-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+.reviews-table th,
+.reviews-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+  vertical-align: top;
+}
+
+.reviews-table th {
+  background: #007bff;
+  color: white;
+  font-weight: bold;
+}
+
+.reviews-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.rating {
+  font-size: 1rem;
+  color: #f39c12; /* gold color for stars */
+  font-weight: bold;
+}
+
+.btn-delete {
+  background: #dc3545;
+  color: white;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.admin-reviews {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.admin-reviews h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #007bff;
+}
+
+.admin-reviews table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.admin-reviews th, .admin-reviews td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.admin-reviews th {
+  background-color: #007bff;
+  color: white;
+}
+
+.admin-reviews tr:hover {
+  background-color: #f1f1f1;
+}
+
+.rating {
+  font-size: 16px;
+  color: gold;
+}
+
+.btn-delete {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-delete:hover {
+  background-color: #c82333;
+}

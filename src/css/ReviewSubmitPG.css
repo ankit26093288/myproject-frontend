@@ -1,0 +1,60 @@
+/* ReviewSubmitPG.css */
+.review-submit-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .review-submit-container h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  .pg-details p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+  }
+  
+  .pg-details p strong {
+    font-weight: bold;
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .buttons button {
+    padding: 12px;
+    font-size: 1.1em;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 45%;
+  }
+  
+  .edit-btn {
+    background-color: #ffcc00;
+    color: white;
+    border: none;
+  }
+  
+  .submit-btn {
+    background-color: #1a73e8;
+    color: white;
+    border: none;
+  }
+  
+  .buttons button:hover {
+    opacity: 0.8;
+  }
+  
+  .buttons button:active {
+    opacity: 0.6;
+  }
+  

@@ -1,0 +1,77 @@
+.student-payments-container {
+  padding: 20px;
+  background-color: #f5f6fa;
+  border-radius: 10px;
+  margin: 20px;
+}
+
+.student-payments-container h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.student-payments-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.student-payments-table th,
+.student-payments-table td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.student-payments-table th {
+  background-color: #2f3640;
+  color: #fff;
+}
+
+.student-payments-table tbody tr:nth-child(even) {
+  background-color: #f1f2f6;
+}
+
+.student-payments-table tbody tr:hover {
+  background-color: #dcdde1;
+}
+
+.status {
+  font-weight: bold;
+  text-transform: capitalize;
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.status.pending {
+  background-color: #f39c12;
+  color: #fff;
+}
+
+.status.paid {
+  background-color: #27ae60;
+  color: #fff;
+}
+
+.status.failed {
+  background-color: #c0392b;
+  color: #fff;
+}
+
+.loading {
+  font-size: 18px;
+  color: #555;
+}
+.invoice-btn {
+  background-color: #2980b9;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.invoice-btn:hover {
+  background-color: #1c5980;
+}

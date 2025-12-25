@@ -1,0 +1,57 @@
+.reviews-page {
+  padding: 20px;
+}
+
+.reviews-page h2 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+/* Form Styles */
+.review-form {
+  background: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.review-form label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+}
+
+.review-form select,
+.review-form input,
+.review-form textarea {
+  padding: 6px 8px;
+  margin-top: 4px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.review-form button {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.review-form button:hover {
+  background: #0056b3;
+}
+
+/* Review List */
+.review-list .review-card {
+  background: #f9f9f9;
+  border: 1px solid #eee;
+  border-radius: 6px;
+  padding: 10px;
+  margin-bottom: 10px;
+}

@@ -1,0 +1,219 @@
+.homePage {
+  font-family: 'Poppins', sans-serif;
+  color: #222;
+}
+
+/* ===== HEADER ===== */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: linear-gradient(90deg, #3b82f6, #60a5fa); /* Blue gradient */
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navList {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  list-style: none;
+}
+
+.navList li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.userBtn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #fff;
+}
+
+.logoutBtn {
+  background: #fff;
+  color: #3b82f6;
+  border-radius: 5px;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.logoutBtn:hover {
+  background: #e0f2fe; /* Light blue hover */
+}
+
+/* ===== HERO ===== */
+.hero {
+  text-align: center;
+  padding: 4rem 1rem;
+  background: url('https://source.unsplash.com/1600x600/?pg,hostel,student') center/cover no-repeat;
+  color: #fff;
+  position: relative;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(59,130,246,0.5); /* Blue overlay */
+  z-index: 0;
+}
+
+.hero h2 {
+  font-size: 2.8rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.searchForm {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+}
+
+.searchForm input {
+  padding: 0.7rem 1rem;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+}
+
+.searchForm button {
+  padding: 0.7rem 1.5rem;
+  border: none;
+  background: #3b82f6; /* Blue button */
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.searchForm button:hover {
+  background: #2563eb; /* Darker blue hover */
+}
+
+/* ===== POPULAR CITIES ===== */
+.popularCities {
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.cityGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.cityCard {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cityCard img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  display: block;
+}
+
+.cityCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(59,130,246,0.3); /* Blue shadow */
+}
+
+.cityOverlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 0.5rem;
+  background: rgba(59,130,246,0.6); /* Semi-transparent blue */
+  color: #fff;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* ===== HOW IT WORKS ===== */
+.howItWorks {
+  padding: 3rem 1rem;
+  text-align: center;
+  background: #f0f9ff; /* Light blue background */
+}
+
+.steps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.step {
+  background: #fff;
+  border-radius: 12px;
+  padding: 2rem;
+  width: 220px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.step:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(59,130,246,0.2); /* Blue shadow hover */
+}
+
+.step span {
+  font-size: 2rem;
+  color: #3b82f6; /* Blue icons/text */
+}
+
+/* ===== CTA ===== */
+.cta {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: linear-gradient(90deg, #3b82f6, #60a5fa); /* Blue gradient */
+  color: #fff;
+}
+
+.cta button {
+  padding: 0.8rem 1.8rem;
+  border: none;
+  border-radius: 10px;
+  background: #fff;
+  color: #3b82f6; /* Blue text */
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cta button:hover {
+  background: #e0f2fe; /* Light blue hover */
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: #1e40af; /* Dark blue */
+  color: #fff;
+  margin-top: 2rem;
+}

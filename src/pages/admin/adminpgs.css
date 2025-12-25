@@ -1,0 +1,120 @@
+/* Scoped only for PGs page */
+.admin-pgs {
+  padding: 20px;
+  min-height: 100vh;
+  background-color: #f9f9f9;
+  font-family: Arial, sans-serif;
+}
+
+.pgs-title {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+.pgs-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+.pgs-table th,
+.pgs-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.pgs-table th {
+  background: #007bff;
+  color: white;
+  font-weight: bold;
+}
+
+.pgs-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.status.pending { color: #ffc107; font-weight: bold; }
+.status.approved { color: #28a745; font-weight: bold; }
+.status.rejected { color: red; font-weight: bold; }
+
+.btn-approve,
+.btn-reject,
+.btn-delete {
+  margin-right: 8px;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.btn-approve {
+  background: #28a745;
+  color: white;
+}
+
+.btn-reject {
+  background: #ffc107;
+  color: black;
+}
+
+.btn-delete {
+  background: #dc3545;
+  color: white;
+}
+
+.status.approved {
+  color: green;
+  font-weight: bold;
+}
+.status.rejected {
+  color: red;
+  font-weight: bold;
+}
+.status.pending {
+  color: orange;
+  font-weight: bold;
+}
+
+.btn-approve {
+  background-color: green;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  margin-right: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.btn-approve:hover {
+  background-color: darkgreen;
+}
+
+.btn-reject {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  margin-right: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.btn-reject:hover {
+  background-color: darkred;
+}
+
+.btn-delete {
+  background-color: #555;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.btn-delete:hover {
+  background-color: #333;
+}

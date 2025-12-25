@@ -25,6 +25,12 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>React App</title>
+    <!-- Botpress Injection Script -->
+<script src="https://cdn.botpress.cloud/webchat/v3.4/inject.js"></script>
+
+<!-- Your Botpress Config Script -->
+<script src="https://files.bpcontent.cloud/2025/11/27/06/20251127060637-JJO47WJR.js" defer></script>
+
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
@@ -39,5 +45,19 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+      <script>
+  window.botpressWebChat.init({
+    botId: "YOUR_BOT_ID",
+    clientId: "YOUR_CLIENT_ID",
+    hostUrl: "https://cdn.botpress.cloud/webchat/v3",
+    messagingUrl: "https://messaging.botpress.cloud",
+    botName: "PG Finder Support",
+    containerWidth: "400px"
+  });
+</script>
+
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+
   </body>
 </html>

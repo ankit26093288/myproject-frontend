@@ -1,0 +1,55 @@
+.pg-details {
+  padding: 20px;
+}
+
+.pg-details h2 {
+  margin-bottom: 5px;
+  color: #007bff;
+}
+
+.pg-details .location {
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.images {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.images img {
+  width: 30%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.info {
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.btn {
+  background: #007bff;
+  border: none;
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #0056b3;
+}
+
+.reviews {
+  margin-top: 25px;
+}
+
+.review {
+  background: #f9f9f9;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  border: 1px solid #eee;
+}

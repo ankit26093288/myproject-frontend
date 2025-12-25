@@ -1,0 +1,63 @@
+/* src/components/admin/Logout.css */
+
+.logout-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #1e293b, #334155);
+  font-family: "Poppins", sans-serif;
+}
+
+.logout-card {
+  background: #fff;
+  padding: 40px 60px;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  width: 380px;
+  animation: fadeInUp 0.6s ease;
+}
+
+.logout-card h2 {
+  color: #1e293b;
+  font-size: 24px;
+  margin-top: 20px;
+  font-weight: 600;
+}
+
+.logout-card p {
+  color: #475569;
+  margin-top: 10px;
+  font-size: 15px;
+}
+
+.logout-spinner {
+  width: 60px;
+  height: 60px;
+  border: 5px solid #e2e8f0;
+  border-top: 5px solid #2563eb;
+  border-radius: 50%;
+  margin: 0 auto;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
