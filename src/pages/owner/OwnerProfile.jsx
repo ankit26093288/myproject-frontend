@@ -11,7 +11,7 @@ const OwnerProfile = () => {
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        const res = await fetch(`http://localhost:5000/api/users/${userId}`, {
+        const res = await fetch(`https://myproject-backend-xj7r.onrender.com/api/users/${userId}`, {
           headers: { Authorization: `Bearer ${token}` }
         });
 
@@ -66,3 +66,4 @@ const OwnerProfile = () => {
 };
 
 export default OwnerProfile;
+

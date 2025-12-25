@@ -35,7 +35,7 @@ export default function RegistrationPage() {
       setLoading(true);
       setMessage("");
 
-      const res = await fetch("http://localhost:5000/api/users/signup", {
+      const res = await fetch("https://myproject-backend-xj7r.onrender.com/api/users/signup", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -69,7 +69,7 @@ export default function RegistrationPage() {
       setLoading(true);
       setMessage("");
 
-      const res = await fetch("http://localhost:5000/api/users/verify-otp", {
+      const res = await fetch("https://myproject-backend-xj7r.onrender.com/api/users/verify-otp", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email: formData.email, otp }),
@@ -97,7 +97,7 @@ export default function RegistrationPage() {
       setLoading(true);
       setMessage("");
 
-      const res = await fetch("http://localhost:5000/api/users/resend-otp", {
+      const res = await fetch("https://myproject-backend-xj7r.onrender.com/api/users/resend-otp", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email: formData.email }),
@@ -224,3 +224,4 @@ export default function RegistrationPage() {
     </div>
   );
 }
+

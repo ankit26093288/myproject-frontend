@@ -7,7 +7,7 @@ const Bookings = () => {
 
   const fetchBookings = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/admin/bookings");
+      const res = await axios.get("https://myproject-backend-xj7r.onrender.com/api/admin/bookings");
       setBookings(res.data);
     } catch (err) {
       console.error(err);
@@ -21,7 +21,7 @@ const Bookings = () => {
   // Update booking status
   const updateStatus = async (id, status) => {
     try {
-      await axios.patch(`http://localhost:5000/api/admin/bookings/${id}/status`, { status });
+      await axios.patch(`https://myproject-backend-xj7r.onrender.com/api/admin/bookings/${id}/status`, { status });
       fetchBookings(); // refresh list
     } catch (err) {
       console.error(err);
@@ -71,3 +71,4 @@ const Bookings = () => {
 };
 
 export default Bookings;
+

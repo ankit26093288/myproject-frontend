@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./UserDashboard.css"; // scoped CSS
+const API_URL = process.env.REACT_APP_API_URL;
 
 export default function UserDashboard() {
   const [user, setUser] = useState(null);
@@ -17,7 +18,7 @@ export default function UserDashboard() {
         }
 
         // ✅ Fetch user profile
-        const res = await fetch("http://localhost:5000/api/dashboard", {
+        const res = await fetch("`${API_URL}/api/dashboard", {
           headers: { Authorization: `Bearer ${token}` },
         });
         const data = await res.json();
@@ -25,7 +26,7 @@ export default function UserDashboard() {
         setUser(data.user);
 
         // ✅ Fetch user bookings
-        const resBookings = await fetch("http://localhost:5000/api/bookings/my", {
+        const resBookings = await fetch("https://myproject-backend-xj7r.onrender.com/api/bookings/my", {
           headers: { Authorization: `Bearer ${token}` },
         });
         const bookingsData = await resBookings.json();
@@ -54,7 +55,7 @@ export default function UserDashboard() {
     formData.append("image", file);
 
     try {
-      const res = await fetch("http://localhost:5000/api/upload/profile-image", {
+      const res = await fetch("https://myproject-backend-xj7r.onrender.com/api/upload/profile-image", {
         method: "POST",
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
         body: formData,
@@ -172,3 +173,4 @@ export default function UserDashboard() {
     </div>
   );
 }
+

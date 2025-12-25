@@ -10,7 +10,7 @@ const StudentPayments = () => {
   useEffect(() => {
     const fetchPayments = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/api/student/payments/${studentId}`);
+        const res = await axios.get(`https://myproject-backend-xj7r.onrender.com/api/student/payments/${studentId}`);
         if (res.data.success) setPayments(res.data.payments);
       } catch (err) {
         console.error("Error fetching payments:", err);
@@ -49,7 +49,7 @@ const StudentPayments = () => {
                 <td>{new Date(payment.createdAt).toLocaleString()}</td>
                 <td>
           <a 
-            href={`http://localhost:5000/api/student/invoice/${payment._id}?studentId=${studentId}`} 
+            href={`https://myproject-backend-xj7r.onrender.com/api/student/invoice/${payment._id}?studentId=${studentId}`} 
             target="_blank" 
             rel="noopener noreferrer"
             className="invoice-btn"
@@ -67,3 +67,4 @@ const StudentPayments = () => {
 };
 
 export default StudentPayments;
+

@@ -10,7 +10,7 @@ const AdminPayments = () => {
   useEffect(() => {
     const fetchPayments = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/admin/payments"); // Backend route
+        const res = await axios.get("https://myproject-backend-xj7r.onrender.com/api/admin/payments"); // Backend route
         if (res.data.success) setPayments(res.data.payments);
       } catch (err) {
         console.error("Error fetching payments:", err);
@@ -49,7 +49,7 @@ const AdminPayments = () => {
                 <td>{new Date(payment.createdAt).toLocaleString()}</td>
                 <td>
   <a 
-    href={`http://localhost:5000/api/admin/invoice/${payment._id}`} 
+    href={`https://myproject-backend-xj7r.onrender.com/api/admin/invoice/${payment._id}`} 
     target="_blank" 
     rel="noopener noreferrer" 
     className="invoice-btn"
@@ -72,3 +72,4 @@ const AdminPayments = () => {
 };
 
 export default AdminPayments;
+

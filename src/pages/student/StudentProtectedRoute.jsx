@@ -14,3 +14,4 @@ export default function StudentProtectedRoute({ children }) {
   // If logged in as student, render the children
   return children;
 }
+

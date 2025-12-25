@@ -15,3 +15,4 @@ const OwnerProtectedRoute = () => {
 };
 
 export default OwnerProtectedRoute;
+

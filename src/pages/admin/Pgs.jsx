@@ -7,7 +7,7 @@ const Pgs = () => {
 
   const fetchPgs = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/admin/pgs");
+      const res = await axios.get("https://myproject-backend-xj7r.onrender.com/api/admin/pgs");
       setPgs(res.data);
     } catch (err) {
       console.error(err);
@@ -21,7 +21,7 @@ const Pgs = () => {
   // Update PG status
   const updateStatus = async (id, status) => {
     try {
-      await axios.patch(`http://localhost:5000/api/admin/pgs/${id}/status`, { status });
+      await axios.patch(`https://myproject-backend-xj7r.onrender.com/api/admin/pgs/${id}/status`, { status });
       fetchPgs(); // refresh list
     } catch (err) {
       console.error(err);
@@ -32,7 +32,7 @@ const Pgs = () => {
   const deletePg = async (id) => {
     if (!window.confirm("Are you sure you want to delete this PG?")) return;
     try {
-      await axios.delete(`http://localhost:5000/api/admin/pgs/${id}`);
+      await axios.delete(`https://myproject-backend-xj7r.onrender.com/api/admin/pgs/${id}`);
       fetchPgs(); // refresh list
     } catch (err) {
       console.error(err);
@@ -77,3 +77,4 @@ const Pgs = () => {
 };
 
 export default Pgs;
+

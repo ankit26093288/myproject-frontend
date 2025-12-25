@@ -38,7 +38,7 @@ const EditPGMultiStep = () => {
   useEffect(() => {
     const fetchPG = async () => {
       try {
-        const res = await fetch(`http://localhost:5000/api/pgs/${id}`, {
+        const res = await fetch(`https://myproject-backend-xj7r.onrender.com/api/pgs/${id}`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         const data = await res.json();
@@ -109,7 +109,7 @@ const EditPGMultiStep = () => {
             : formData.imageUrls || [],
       };
 
-      const res = await fetch(`http://localhost:5000/api/pg-add-page/${id}`, {
+      const res = await fetch(`https://myproject-backend-xj7r.onrender.com/api/pg-add-page/${id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -298,3 +298,4 @@ const EditPGMultiStep = () => {
 };
 
 export default EditPGMultiStep;
+

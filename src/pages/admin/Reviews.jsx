@@ -7,7 +7,7 @@ const Reviews = () => {
 
   const fetchReviews = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/admin/reviews");
+      const res = await axios.get("https://myproject-backend-xj7r.onrender.com/api/admin/reviews");
       setReviews(res.data);
     } catch (err) {
       console.error(err);
@@ -22,7 +22,7 @@ const Reviews = () => {
   const handleDelete = async (id) => {
     if (!window.confirm("Are you sure you want to delete this review?")) return;
     try {
-      await axios.delete(`http://localhost:5000/api/admin/reviews/${id}`);
+      await axios.delete(`https://myproject-backend-xj7r.onrender.com/api/admin/reviews/${id}`);
       fetchReviews(); // refresh list
     } catch (err) {
       console.error(err);
@@ -71,3 +71,4 @@ const Reviews = () => {
 };
 
 export default Reviews;
+

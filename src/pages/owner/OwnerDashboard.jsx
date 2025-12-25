@@ -15,7 +15,7 @@ const OwnerDashboard = () => {
       try {
         // Fetch PGs by owner
         const pgRes = await fetch(
-          `http://localhost:5000/api/pgs/owner/${ownerId}`,
+          `https://myproject-backend-xj7r.onrender.com/api/pgs/owner/${ownerId}`,
           { headers: { Authorization: `Bearer ${token}` } }
         );
         const pgData = await pgRes.json();
@@ -23,7 +23,7 @@ const OwnerDashboard = () => {
 
         // Fetch bookings by owner
         const bookingRes = await fetch(
-          `http://localhost:5000/api/bookings/by-owner/${ownerId}`,
+          `https://myproject-backend-xj7r.onrender.com/api/bookings/by-owner/${ownerId}`,
           { headers: { Authorization: `Bearer ${token}` } }
         );
         const bookingData = await bookingRes.json();
@@ -91,3 +91,4 @@ const OwnerDashboard = () => {
 };
 
 export default OwnerDashboard;
+

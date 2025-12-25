@@ -11,7 +11,7 @@ export const getAuthHeaders = () => {
 // Fetch student dashboard info
 export const fetchStudentDashboard = async () => {
   try {
-    const res = await fetch("http://localhost:5000/api/student/dashboard", {
+    const res = await fetch("https://myproject-backend-xj7r.onrender.com/api/student/dashboard", {
       headers: getAuthHeaders(),
     });
     return await res.json();
@@ -24,7 +24,7 @@ export const fetchStudentDashboard = async () => {
 // Fetch PGs for browse page
 export const fetchBrowsePGs = async () => {
   try {
-    const res = await fetch("http://localhost:5000/api/student/browse", {
+    const res = await fetch("https://myproject-backend-xj7r.onrender.com/api/student/browse", {
       headers: getAuthHeaders(),
     });
     return await res.json();
@@ -37,7 +37,7 @@ export const fetchBrowsePGs = async () => {
 // Fetch details of a single PG by ID
 export const fetchPGDetails = async (pgId) => {
   try {
-    const res = await fetch(`http://localhost:5000/api/student/pg/${pgId}`, {
+    const res = await fetch(`https://myproject-backend-xj7r.onrender.com/api/student/pg/${pgId}`, {
       headers: getAuthHeaders(),
     });
     return await res.json();
@@ -50,7 +50,7 @@ export const fetchPGDetails = async (pgId) => {
 // Bookings APIs
 export const fetchBookings = async () => {
   try {
-    const res = await fetch("http://localhost:5000/api/student/bookings", {
+    const res = await fetch("https://myproject-backend-xj7r.onrender.com/api/student/bookings", {
       headers: getAuthHeaders(),
     });
     return await res.json();
@@ -62,7 +62,7 @@ export const fetchBookings = async () => {
 
 export const createBooking = async (pgId, startDate, endDate) => {
   try {
-    const res = await fetch("http://localhost:5000/api/student/bookings", {
+    const res = await fetch("https://myproject-backend-xj7r.onrender.com/api/student/bookings", {
       method: "POST",
       headers: getAuthHeaders(),
       body: JSON.stringify({ pgId, startDate, endDate }),
@@ -77,7 +77,7 @@ export const createBooking = async (pgId, startDate, endDate) => {
 // Reviews APIs
 export const fetchReviews = async () => {
   try {
-    const res = await fetch("http://localhost:5000/api/student/reviews", {
+    const res = await fetch("https://myproject-backend-xj7r.onrender.com/api/student/reviews", {
       headers: getAuthHeaders(),
     });
     return await res.json();
@@ -89,7 +89,7 @@ export const fetchReviews = async () => {
 
 export const createReview = async (pgId, rating, comment) => {
   try {
-    const res = await fetch("http://localhost:5000/api/student/reviews", {
+    const res = await fetch("https://myproject-backend-xj7r.onrender.com/api/student/reviews", {
       method: "POST",
       headers: getAuthHeaders(),
       body: JSON.stringify({ pgId, rating, comment }),
@@ -104,7 +104,7 @@ export const createReview = async (pgId, rating, comment) => {
 // Fetch student bookings for dropdown in reviews
 export const fetchStudentBookings = async () => {
   try {
-    const res = await fetch("http://localhost:5000/api/student/bookings", {
+    const res = await fetch("https://myproject-backend-xj7r.onrender.com/api/student/bookings", {
       headers: getAuthHeaders(),
     });
     const data = await res.json();
@@ -118,7 +118,7 @@ export const fetchStudentBookings = async () => {
 // Profile APIs
 export const updateProfile = async (data) => {
   try {
-    const res = await fetch("http://localhost:5000/api/student/profile", {
+    const res = await fetch("https://myproject-backend-xj7r.onrender.com/api/student/profile", {
       method: "PUT",
       headers: getAuthHeaders(),
       body: JSON.stringify(data),
@@ -129,3 +129,4 @@ export const updateProfile = async (data) => {
     return null;
   }
 };
+

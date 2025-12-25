@@ -11,7 +11,7 @@ const BookingRequests = () => {
     const fetchBookings = async () => {
       try {
         const res = await fetch(
-          `http://localhost:5000/api/bookings/owner/${ownerId}`,
+          `https://myproject-backend-xj7r.onrender.com/api/bookings/owner/${ownerId}`,
           {
             headers: { Authorization: `Bearer ${token}` },
           }
@@ -35,7 +35,7 @@ const BookingRequests = () => {
   const handleAction = async (id, action) => {
     try {
       const res = await fetch(
-        `http://localhost:5000/api/bookings/${id}/status`,
+        `https://myproject-backend-xj7r.onrender.com/api/bookings/${id}/status`,
         {
           method: "PUT",
           headers: {
@@ -115,3 +115,4 @@ const BookingRequests = () => {
 };
 
 export default BookingRequests;
+

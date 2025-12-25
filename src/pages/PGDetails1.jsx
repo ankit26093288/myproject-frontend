@@ -21,13 +21,13 @@ const PGDetails1 = () => {
     const fetchData = async () => {
       try {
         // ✅ Fetch PG details
-        const resPG = await fetch(`http://localhost:5000/api/pgs/${id}`);
+        const resPG = await fetch(`https://myproject-backend-xj7r.onrender.com/api/pgs/${id}`);
         const pgData = await resPG.json();
         if (!resPG.ok) throw new Error(pgData.message || "Failed to fetch PG");
         setPg(pgData);
 
         // ✅ Fetch PG reviews
-        const resReviews = await fetch(`http://localhost:5000/api/reviews/${id}`);
+        const resReviews = await fetch(`https://myproject-backend-xj7r.onrender.com/api/reviews/${id}`);
         const reviewsData = await resReviews.json();
         if (resReviews.ok) {
           setReviews(reviewsData);
@@ -51,7 +51,7 @@ const PGDetails1 = () => {
     }
 
     try {
-      const res = await fetch("http://localhost:5000/api/bookings", {
+      const res = await fetch("https://myproject-backend-xj7r.onrender.com/api/bookings", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -84,7 +84,7 @@ const PGDetails1 = () => {
   }
 
   try {
-    const res = await fetch("http://localhost:5000/api/reviews", {
+    const res = await fetch("https://myproject-backend-xj7r.onrender.com/api/reviews", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -214,3 +214,4 @@ const PGDetails1 = () => {
 };
 
 export default PGDetails1;
+

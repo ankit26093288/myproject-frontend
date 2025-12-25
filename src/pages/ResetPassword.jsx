@@ -27,7 +27,7 @@ export default function ResetPassword() {
     if (password !== confirm) return setMessage("Passwords do not match.");
     setLoading(true);
     try {
-      const res = await fetch("http://localhost:5000/api/email/reset-password", {
+      const res = await fetch("https://myproject-backend-xj7r.onrender.com/api/email/reset-password", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ token, email, password }),
@@ -83,3 +83,4 @@ export default function ResetPassword() {
     </div>
   );
 }
+

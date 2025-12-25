@@ -12,7 +12,7 @@ const Deleteimg = () => {
     // ✅ Fetch existing images for this PG
     const fetchImages = async () => {
       const token = localStorage.getItem("token");
-      const res = await fetch(`http://localhost:5000/api/pgs/${pgId}`, {
+      const res = await fetch(`https://myproject-backend-xj7r.onrender.com/api/pgs/${pgId}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       const data = await res.json();
@@ -26,7 +26,7 @@ const Deleteimg = () => {
 
     try {
       const token = localStorage.getItem("token");
-      const res = await fetch(`http://localhost:5000/api/pg-add-page/remove-image/${pgId}`, {
+      const res = await fetch(`https://myproject-backend-xj7r.onrender.com/api/pg-add-page/remove-image/${pgId}`, {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",
@@ -66,7 +66,7 @@ const Deleteimg = () => {
     selectedFiles.forEach((file) => formData.append("images", file));
     formData.append("pgId", pgId);
 
-    const res = await fetch("http://localhost:5000/api/pgs/upload-images", {
+    const res = await fetch("https://myproject-backend-xj7r.onrender.com/api/pgs/upload-images", {
       method: "POST",
       headers: { Authorization: `Bearer ${token}` },
       body: formData,
@@ -126,3 +126,4 @@ const Deleteimg = () => {
 };
 
 export default Deleteimg;
+

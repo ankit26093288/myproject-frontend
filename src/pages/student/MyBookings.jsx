@@ -25,11 +25,11 @@ export default function MyBookings() {
   }, []);
 
 const handlePay = async (booking) => {
-  const { key } = await fetch("http://localhost:5000/get-razorpay-key")
+  const { key } = await fetch("https://myproject-backend-xj7r.onrender.com/get-razorpay-key")
     .then((res) => res.json());
 
   try {
-    const res = await fetch("http://localhost:5000/api/payment/create-order", {
+    const res = await fetch("https://myproject-backend-xj7r.onrender.com/api/payment/create-order", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -52,7 +52,7 @@ const handlePay = async (booking) => {
       order_id: data.order.id,
 
       handler: async function (response) {
-        const verify = await fetch("http://localhost:5000/api/payment/verify-payment", {
+        const verify = await fetch("https://myproject-backend-xj7r.onrender.com/api/payment/verify-payment", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
@@ -149,3 +149,4 @@ const handlePay = async (booking) => {
     </div>
   );
 }
+

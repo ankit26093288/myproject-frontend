@@ -15,7 +15,7 @@ const Dashboard = () => {
   useEffect(() => {
     const fetchStats = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/admin/dashboard");
+        const res = await axios.get("https://myproject-backend-xj7r.onrender.com/api/admin/dashboard");
         setStats(res.data);
       } catch (error) {
         console.error("Error fetching dashboard stats:", error);
@@ -60,3 +60,4 @@ const Dashboard = () => {
 };
 
 export default Dashboard;
+

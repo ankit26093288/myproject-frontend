@@ -25,7 +25,7 @@ const Settings = () => {
   // Fetch admin profile
   const fetchProfile = async () => {
     try {
-      const res = await axios.get(`http://localhost:5000/api/admin/profile/${adminId}`);
+      const res = await axios.get(`https://myproject-backend-xj7r.onrender.com/api/admin/profile/${adminId}`);
       setProfile(res.data);
     } catch (err) {
       console.error(err);
@@ -42,7 +42,7 @@ const Settings = () => {
   const handleProfileSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.put(`http://localhost:5000/api/admin/profile/${adminId}`, profile);
+      const res = await axios.put(`https://myproject-backend-xj7r.onrender.com/api/admin/profile/${adminId}`, profile);
       alert(res.data.message);
     } catch (err) {
       console.error(err);
@@ -57,7 +57,7 @@ const Settings = () => {
       return;
     }
     try {
-      const res = await axios.put(`http://localhost:5000/api/admin/profile/${adminId}/password`, {
+      const res = await axios.put(`https://myproject-backend-xj7r.onrender.com/api/admin/profile/${adminId}/password`, {
         currentPassword: passwords.currentPassword,
         newPassword: passwords.newPassword,
       });
@@ -103,3 +103,4 @@ const Settings = () => {
 };
 
 export default Settings;
+

@@ -35,7 +35,7 @@ const UploadImages = () => {
       // ✅ send pgId in body too
       formData.append("pgId", pgId);
 
-      const res = await fetch("http://localhost:5000/api/pgs/upload-images", {
+      const res = await fetch("https://myproject-backend-xj7r.onrender.com/api/pgs/upload-images", {
         method: "POST",
         headers: {
           Authorization: `Bearer ${token}`, // do NOT set Content-Type manually for FormData
@@ -98,3 +98,4 @@ const UploadImages = () => {
 };
 
 export default UploadImages;
+

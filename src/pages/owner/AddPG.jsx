@@ -142,7 +142,7 @@ const AddPGMultiStep = () => {
     };
 
     try {
-      const res = await fetch("http://localhost:5000/api/pg-add-page/add", {
+      const res = await fetch("https://myproject-backend-xj7r.onrender.com/api/pg-add-page/add", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formattedData),
@@ -365,3 +365,4 @@ const AddPGMultiStep = () => {
 };
 
 export default AddPGMultiStep;
+

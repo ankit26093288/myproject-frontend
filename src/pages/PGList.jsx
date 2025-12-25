@@ -12,7 +12,7 @@ const PGList = ({ city, budget }) => { // ✅ receive props
   useEffect(() => {
     const fetchPGs = async () => {
       try {
-        const res = await fetch("http://localhost:5000/api/pgs");
+        const res = await fetch("https://myproject-backend-xj7r.onrender.com/api/pgs");
         const data = await res.json();
 
         if (!res.ok) {
@@ -95,3 +95,4 @@ const PGList = ({ city, budget }) => { // ✅ receive props
 };
 
 export default PGList;
+

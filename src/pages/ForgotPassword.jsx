@@ -13,7 +13,7 @@ export default function ForgotPassword() {
     setMessage("");
     setLoading(true);
     try {
-      const res = await fetch("http://localhost:5000/api/email/forgot-password", {
+      const res = await fetch("https://myproject-backend-xj7r.onrender.com/api/email/forgot-password", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email }),
@@ -52,3 +52,4 @@ export default function ForgotPassword() {
     </div>
   );
 }
+

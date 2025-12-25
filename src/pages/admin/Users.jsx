@@ -8,7 +8,7 @@ const Users = () => {
   // Fetch users from backend
   const fetchUsers = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/admin/users");
+      const res = await axios.get("https://myproject-backend-xj7r.onrender.com/api/admin/users");
       setUsers(res.data);
     } catch (err) {
       console.error(err);
@@ -23,7 +23,7 @@ const Users = () => {
   const handleDelete = async (id) => {
     if (!window.confirm("Are you sure you want to delete this user?")) return;
     try {
-      await axios.delete(`http://localhost:5000/api/admin/users/${id}`);
+      await axios.delete(`https://myproject-backend-xj7r.onrender.com/api/admin/users/${id}`);
       fetchUsers(); // refresh list
     } catch (err) {
       console.error(err);
@@ -62,3 +62,4 @@ const Users = () => {
 };
 
 export default Users;
+

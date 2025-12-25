@@ -12,7 +12,7 @@ const ManageListings = () => {
   useEffect(() => {
     const load = async () => {
       try {
-        const res = await fetch(`http://localhost:5000/api/pgs/owner/${ownerId}`, {
+        const res = await fetch(`https://myproject-backend-xj7r.onrender.com/api/pgs/owner/${ownerId}`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         const data = await res.json();
@@ -31,7 +31,7 @@ const handleDelete = async (id) => {
   if (!window.confirm("Are you sure you want to delete this PG?")) return;
 
   try {
-    await fetch(`http://localhost:5000/api/pg-add-page/${id}`, {
+    await fetch(`https://myproject-backend-xj7r.onrender.com/api/pg-add-page/${id}`, {
       method: "DELETE",
       headers: {
         Authorization: `Bearer ${token}`,
@@ -93,3 +93,4 @@ const handleDelete = async (id) => {
 };
 
 export default ManageListings;
+
